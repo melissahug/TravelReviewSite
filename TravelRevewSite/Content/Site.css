@@ -1,50 +1,82 @@
-﻿.coverPage {
+﻿/*background color for all pages and removes the 15px padding/margin*/
+body {
+    background-color:burlywood;
+    margin:0px;
+    padding:0px;
+}
+
+.coverPage {
     background-image: url('Image/TravelCoverPic1098x550.jpg');
     background-repeat:no-repeat;
-    position:center;
-    width: 1225px;
+    background-size:cover;
+    /*position:center;*/
+    width: 1625px;
     height: 700px;
-    padding-left:40px;
-    padding-top: 35px;
+    /*padding-left:40px;
+    padding-top: 35px;*/
+    /*padding-left:0px;
+    padding-right:0px;*/
+    /*margin-left:50px;*/
+    /*margin-right:0px;*/
     }
 
 #buttonGroup {
    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-   margin-top: 250px;
+   text-align:center;
+   /*height:100px;*/
+   margin-top: 0px;
    margin-bottom:0px;
-   padding-top: 25px;
+   padding-top: 30px;
    padding-bottom:0px;
-   margin-left:305px;
+   text-decoration:none;
+   border: none;
+   border-radius:18px;
+   
+   /*margin-left:305px;*/
    }
+#buttonGroup a {
+   background-color:transparent;
+   border-color:black;
+   color:black;
+   font-weight:bolder;
+}
 
 .logoFont {
     font-family:"Sofia";
     font-size: 86px;
+    color:white;
     margin-top:25px;
-    margin-left:275px;
-    text-align:match-parent;
+    /*margin-left:275px;*/
+    text-align:center;
+    text-shadow: 0 5px 0 black;
+    background-color: rgba(17, 0,0,.3);
+    
      }
 
 .tagLine {
     font-weight:bolder;
     font-size:22px;
+    color:white;
     margin-bottom: 25px;
-    text-align:match-parent;
-    margin-left:330px;
+    text-align:center;
+    background-color: rgba(17, 0,0,.3);
+
+    /*margin-left:330px;*/
     }
 /* Set padding to keep content from hitting the edges */
 .body-content {
     padding-left: 15px;
     padding-right: 15px;
     padding-top:0px;
-    padding-bottom:0px;
+    /*padding-bottom:0px;*/
     margin-top:0px;
-    margin-bottom:0px;
+    /*margin-bottom:0px;*/
+
 }
 
-/* Override the default bootstrap behavior where horizontal description lists 
-   will truncate terms that are too long to fit in the left column 
-*/
+/*Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column */
+
 .dl-horizontal dt {
     white-space: normal;
 }
@@ -54,4 +86,11 @@ input,
 select,
 textarea {
     max-width: 280px;
+}
+h2, #submitReview{
+    text-align:center;
+    }
+
+#submitReview {
+    font-family:"Sophia";
 }
