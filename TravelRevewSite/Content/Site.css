@@ -5,34 +5,41 @@
     width: 1225px;
     height: 700px;
     padding-left:40px;
-    padding-top: 125px;
-    margin-top:25px;
-}
+    padding-top: 35px;
+    }
 
 #buttonGroup {
    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
    margin-top: 250px;
    margin-bottom:0px;
-   padding-top: 250px;
+   padding-top: 25px;
    padding-bottom:0px;
-   margin: 0px;
-   margin-right:0px;
+   margin-left:305px;
    }
 
 .logoFont {
     font-family:"Sofia";
     font-size: 86px;
     margin-top:25px;
+    margin-left:275px;
+    text-align:match-parent;
      }
 
 .tagLine {
     font-weight:bolder;
+    font-size:22px;
     margin-bottom: 25px;
+    text-align:match-parent;
+    margin-left:330px;
     }
 /* Set padding to keep content from hitting the edges */
 .body-content {
     padding-left: 15px;
     padding-right: 15px;
+    padding-top:0px;
+    padding-bottom:0px;
+    margin-top:0px;
+    margin-bottom:0px;
 }
 
 /* Override the default bootstrap behavior where horizontal description lists 
@@ -42,9 +49,9 @@
     white-space: normal;
 }
 
-/* Set width on the form input elements since they're 100% wide by default 
+/* Set width on the form input elements since they're 100% wide by default */
 input,
 select,
 textarea {
     max-width: 280px;
-}*/
+}

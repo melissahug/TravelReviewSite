@@ -1,57 +1,48 @@
 ﻿@model IEnumerable<TravelRevewSite.Models.Review>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Travel Reviews";
 }
 
-<h2>Index</h2>
+<h2>@ViewBag.Title</h2>
 
 <p>
     @Html.ActionLink("Submit Your Review", "Create")
 </p>
-<table class="table">
-    <tr>
-        <th>
+<div class="row">
+    @*
             @Html.DisplayNameFor(model => model.Location.LocationName)
-        </th>
-        <th>
+        
             @Html.DisplayNameFor(model => model.Name)
-        </th>
-        <th>
+        
             @Html.DisplayNameFor(model => model.TripDate)
-        </th>
-        <th>
+        
             @Html.DisplayNameFor(model => model.Email)
-        </th>
-        <th>
+        
             @Html.DisplayNameFor(model => model.UserReview)
-        </th>
-        <th></th>
-    </tr>
+      *@  
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Location.LocationName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Name)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.TripDate)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Email)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.UserReview)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.ID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
-        </td>
-    </tr>
-}
+    @foreach (var item in Model)
+    {
+        <div class="col-sm-6 col-md-4">
+            <div class="thumbnail">
+                <div class="caption">
+                   <h3>@Html.DisplayFor(modelItem => item.Location.LocationName)</h3>
+                   <p>@Html.DisplayFor(modelItem => item.Name)</p>
+                   <p>@Html.DisplayFor(modelItem => item.TripDate)</p>
+                   <p>@Html.DisplayFor(modelItem => item.Email)</p>
+                   <p>@Html.DisplayFor(modelItem => item.UserReview)</p>
+                   <p>@Html.ActionLink("Edit", "Edit", new { id = item.ID }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.ID }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.ID })</p>
+                    </div>
+               </div>
+         </div>
+    }
 
-</table>
+</div>
+
+
+<div>
+    @Html.ActionLink("Home", "Index", "Home")
+</div>
