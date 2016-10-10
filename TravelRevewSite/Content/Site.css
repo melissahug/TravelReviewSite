@@ -5,6 +5,7 @@ body {
     padding:0px;
 }
 
+/*various changes were commented out but left for future reference if needed*/
 .coverPage {
     background-image: url('Image/TravelCoverPic1098x550.jpg');
     background-repeat:no-repeat;
