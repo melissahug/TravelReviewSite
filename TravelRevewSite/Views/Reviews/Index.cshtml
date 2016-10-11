@@ -3,6 +3,24 @@
 @{
     ViewBag.Title = "Travel Reviews";
 }
+@* The syntax to add an image however the path is not correct to get to get them*@
+@{WebImage photo = null;
+    var newFileName = "";
+    var imagePath = "";
+
+    if (IsPost) {
+
+        photo = WebImage.GetImageFromRequest();
+        if (photo != null)
+        {
+            newFileName = Guid.NewGuid().ToString() + "_" +
+                Path.GetFileName(photo.FileName);
+            imagePath = @"images\" + newFileName;
+
+            photo.Save(@"~\" + imagePath);
+        }
+    }
+}
 
 <h2>@ViewBag.Title</h2>
 
@@ -36,8 +54,26 @@
                    <p>@Html.ActionLink("Edit", "Edit", new { id = item.ID }) |
                     @Html.ActionLink("Details", "Details", new { id = item.ID }) |
                     @Html.ActionLink("Delete", "Delete", new { id = item.ID })</p>
+                 </div>
+            <div>
+                <form action="" method="post" enctype="multipart/form-data">
+                    <fieldset>
+                        <legend>Upload Image</legend>
+                        <label for="Image">Image</label>
+                        <input type="file" name="Image" />
+                        <br/>
+                        <input type="submit" value="Upload" />
+                    </fieldset>
+                 </form>
+            
+                @if(imagePath != "")
+                {
+                    <div class="result">
+                        <img src="@imagePath" alt="image" />
                     </div>
-               </div>
+                }
+            </div> 
+              </div>
          </div>
     }
 
